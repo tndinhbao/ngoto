@@ -1,6 +1,6 @@
 {
   "name": "vnng-eventjs",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Expressive event middleware framework",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,15 @@
     "format": "prettier *.js lib/*.js",
     "eslint": "eslint --fix --ext .js lib/*.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tndinhbao/vnng-eventjs.git"
+  },
+  "keywords": [
+    "event",
+    "vnng"
+  ],
+  "author": "Bao Tran",
   "license": "ISC",
   "dependencies": {
     "amqplib": "^0.5.2",
