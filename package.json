@@ -17,7 +17,7 @@
     "vnng"
   ],
   "author": "Bao Tran",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "amqplib": "^0.5.2",
     "debug": "^3.1.0",
