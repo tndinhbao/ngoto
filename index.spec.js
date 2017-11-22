@@ -1,4 +1,3 @@
-const debug = require('debug')('vnng-eventjs');
 const assert = require('assert');
 const amqp = require('amqplib');
 const eventjs = require('./');
@@ -27,10 +26,9 @@ describe('EventJS Application', () => {
 
     function parseMiddleware(ctx, next) {
       try {
-        ctx.content = JSON.parse(ctx.originMsg.content.toString());
+        ctx.event = JSON.parse(ctx.content.toString());
         next();
       } catch (e) {
-        debug('Parse message error');
         throw e;
       }
     }
@@ -46,12 +44,12 @@ describe('EventJS Application', () => {
     app.set('_events', [AGGREGATE_ID]);
     app.use(parseMiddleware);
     app.use(function receiveMessage(ctx, next) {
-      ctx.message = ctx.content;
+      ctx.msg = ctx.event;
       next();
     });
 
     app.use(function confirmMessage(ctx) {
-      assert.deepEqual(ctx.message, message);
+      assert.deepEqual(ctx.msg, message);
       done();
     });
 
