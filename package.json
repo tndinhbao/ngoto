@@ -1,0 +1,26 @@
+{
+  "name": "vnng-eventjs",
+  "version": "0.0.1",
+  "description": "Expressive event middleware framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec *.spec.js",
+    "format": "prettier *.js lib/*.js",
+    "eslint": "eslint --fix --ext .js lib/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "debug": "^3.1.0",
+    "koa-compose": "^4.0.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^4.0.1",
+    "prettier": "^1.8.2"
+  }
+}
