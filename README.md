@@ -1,2 +1,2 @@
-# vnng-eventjs
+# ngoto
 Expressive event middleware framework
